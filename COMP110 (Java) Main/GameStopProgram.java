@@ -1,4 +1,4 @@
-// By Bogdan Itsam Dorantes-Nikolaev, COMP110, Instructor: Prof. Adem Karahoca (April 15th, 2022)
+// By Bogdan Itsam Dorantes-Nikolaev, COMP110, Instructor: Prof. Adem Karahoca (April 17th, 2022)
 
 //import scanner class
 import java.util.Scanner;
@@ -154,6 +154,17 @@ class GameStopItem extends GameStopProgram {
     public void makeItemForSale(GameStopItem item) {
         item.forSale = true;
     }
+    // toString method
+    @Override
+    public String toString() {
+        return "GameStopItem{" +
+                "itemID=" + itemID +
+                ", itemName='" + itemName + '\'' +
+                ", itemPrice=" + itemPrice +
+                ", itemQuantity=" + itemQuantity +
+                ", forSale=" + forSale +
+                '}';
+    }
 }
 class DVD extends GameStopItem {
     String platform;
@@ -168,6 +179,53 @@ class DVD extends GameStopItem {
         this.releaseDate = releaseDate;
         this.region = region;
     }
+    //toString method
+    @Override
+    public String toString() {
+        return "DVD{" +
+                "platform='" + platform + '\'' +
+                ", genre='" + genre + '\'' +
+                ", releaseDate='" + releaseDate + '\'' +
+                ", region='" + region + '\'' +
+                '}';
+    }
+    //method to print out the information of a DVD
+    public void printDVDInfo(DVD dvd) {
+        System.out.println("DVD ID: " + dvd.itemID);
+        System.out.println("DVD Name: " + dvd.itemName);
+        System.out.println("DVD Price: " + dvd.itemPrice);
+        System.out.println("DVD Quantity: " + dvd.itemQuantity);
+        System.out.println("DVD For Sale: " + dvd.forSale);
+        System.out.println("DVD Platform: " + dvd.platform);
+        System.out.println("DVD Genre: " + dvd.genre);
+        System.out.println("DVD Release Date: " + dvd.releaseDate);
+        System.out.println("DVD Region: " + dvd.region);
+    }
+    //getters and setters
+    public String getPlatform() {
+        return platform;
+    }
+    public void setPlatform(String platform) {
+        this.platform = platform;
+    }
+    public String getGenre() {
+        return genre;
+    }
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+    public String getReleaseDate() {
+        return releaseDate;
+    }
+    public void setReleaseDate(String releaseDate) {
+        this.releaseDate = releaseDate;
+    }
+    public String getRegion() {
+        return region;
+    }
+    public void setRegion(String region) {
+        this.region = region;
+    }
 }
 class DigitalKey extends GameStopItem {
     String platform;
@@ -180,6 +238,53 @@ class DigitalKey extends GameStopItem {
         this.platform = platform;
         this.region = region;
         this.genre = genre;
+        this.releaseDate = releaseDate;
+    }
+    //toString method
+    @Override
+    public String toString() {
+        return "DigitalKey{" +
+                "platform='" + platform + '\'' +
+                ", region='" + region + '\'' +
+                ", genre='" + genre + '\'' +
+                ", releaseDate='" + releaseDate + '\'' +
+                '}';
+    }
+    //method to print out the information of a DigitalKey
+    public void printDigitalKeyInfo(DigitalKey digitalKey) {
+        System.out.println("DigitalKey ID: " + digitalKey.itemID);
+        System.out.println("DigitalKey Name: " + digitalKey.itemName);
+        System.out.println("DigitalKey Price: " + digitalKey.itemPrice);
+        System.out.println("DigitalKey Quantity: " + digitalKey.itemQuantity);
+        System.out.println("DigitalKey For Sale: " + digitalKey.forSale);
+        System.out.println("DigitalKey Platform: " + digitalKey.platform);
+        System.out.println("DigitalKey Genre: " + digitalKey.genre);
+        System.out.println("DigitalKey Release Date: " + digitalKey.releaseDate);
+        System.out.println("DigitalKey Region: " + digitalKey.region);
+    }
+    //getters and setters
+    public String getPlatform() {
+        return platform;
+    }
+    public void setPlatform(String platform) {
+        this.platform = platform;
+    }
+    public String getRegion() {
+        return region;
+    }
+    public void setRegion(String region) {
+        this.region = region;
+    }
+    public String getGenre() {
+        return genre;
+    }
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+    public String getReleaseDate() {
+        return releaseDate;
+    }
+    public void setReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
     }
 }
@@ -198,6 +303,69 @@ class Device extends GameStopItem {
         this.model = model;
         this.storage = storage;
         this.yearOfManufacture = yearOfManufacture;
+        this.specifications = specifications;
+    }
+    //toString method
+    @Override
+    public String toString() {
+        return "Device{" +
+                "manufacturer='" + manufacturer + '\'' +
+                ", type='" + type + '\'' +
+                ", model='" + model + '\'' +
+                ", storage='" + storage + '\'' +
+                ", yearOfManufacture='" + yearOfManufacture + '\'' +
+                ", specifications='" + specifications + '\'' +
+                '}';
+    }
+    //method to print out the information of a Device
+    public void printDeviceInfo(Device device) {
+        System.out.println("Device ID: " + device.itemID);
+        System.out.println("Device Name: " + device.itemName);
+        System.out.println("Device Price: " + device.itemPrice);
+        System.out.println("Device Quantity: " + device.itemQuantity);
+        System.out.println("Device For Sale: " + device.forSale);
+        System.out.println("Device Manufacturer: " + device.manufacturer);
+        System.out.println("Device Type: " + device.type);
+        System.out.println("Device Model: " + device.model);
+        System.out.println("Device Storage: " + device.storage);
+        System.out.println("Device Year of Manufacture: " + device.yearOfManufacture);
+        System.out.println("Device Specifications: " + device.specifications);
+    }
+    //getters and setters
+    public String getManufacturer() {
+        return manufacturer;
+    }
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+    public String getType() {
+        return type;
+    }
+    public void setType(String type) {
+        this.type = type;
+    }
+    public String getModel() {
+        return model;
+    }
+    public void setModel(String model) {
+        this.model = model;
+    }
+    public String getStorage() {
+        return storage;
+    }
+    public void setStorage(String storage) {
+        this.storage = storage;
+    }
+    public String getYearOfManufacture() {
+        return yearOfManufacture;
+    }
+    public void setYearOfManufacture(String yearOfManufacture) {
+        this.yearOfManufacture = yearOfManufacture;
+    }
+    public String getSpecifications() {
+        return specifications;
+    }
+    public void setSpecifications(String specifications) {
         this.specifications = specifications;
     }
 }
