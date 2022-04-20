@@ -1,0 +1,8 @@
+By Bogdan Itsam Dorantes-Nikolaev, COMP110, Instructor: Prof. Adem Karahoca (April 19th, 2022)
+
+The output produced by the program in question 2 is as following:
+
+Trying
+Starting sampleMethod.
+Catching
+From sampleMethod with love.
