@@ -19,7 +19,6 @@ public class JavaFX_2 extends Application {
     private final double CHANGE_IN_RADIUS = 2;
     // Change in distance between center of spiral and center of circle between circles
     private final double CHANGE_IN_DISTANCE = 10;
-
     // Cycle the colors of the circles through red, green, and blue.
     private final Color[] COLORS = {Color.RED, Color.GREEN, Color.BLUE};
     // Change in angle between the positions of circles
